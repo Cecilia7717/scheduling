@@ -336,8 +336,8 @@ def generate_feasible_jobs(
 def generate_feasible_instance(
     rng: random.Random,
     instance_id: int,
-    min_jobs: int = 5,
-    max_jobs: int = 15,
+    min_jobs: int = 25,
+    max_jobs: int = 50,
     horizon_range: Tuple[int, int] = (20, 60),
     green_share_range: Tuple[float, float] = (0.65, 0.75),
     brown_share_range: Optional[Tuple[float, float]] = (0.20, 0.25),

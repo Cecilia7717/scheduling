@@ -6,11 +6,11 @@ import numpy as np
 
 
 BASE_DIR = Path(__file__).resolve().parent
-RESULTS_DIR = BASE_DIR / "heatmap_results"
+RESULTS_DIR = BASE_DIR / "heatmap_results_1"
 
-MAXFLOW_OUTPUT = BASE_DIR / "maxflow_runtime_heatmap.png"
-MINCOST_OUTPUT = BASE_DIR / "mincost_runtime_heatmap.png"
-RATIO_OUTPUT = BASE_DIR / "runtime_ratio_heatmap.png"
+MAXFLOW_OUTPUT = BASE_DIR / "maxflow_runtime_heatmap_1.png"
+MINCOST_OUTPUT = BASE_DIR / "mincost_runtime_heatmap_1.png"
+RATIO_OUTPUT = BASE_DIR / "runtime_ratio_heatmap_1.png"
 
 
 GREEN_RANGES = [

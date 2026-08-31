@@ -46,7 +46,7 @@ for UTIL_RANGE in "${UTIL_RANGES[@]}"; do
 
         COUNT=$((COUNT + 1))
 
-        OUTPUT_NAME="heatmap_results/util_${UTIL_MIN}_${UTIL_MAX}_green_${GREEN_MIN}_${GREEN_MAX}"
+        OUTPUT_NAME="heatmap_results_1/util_${UTIL_MIN}_${UTIL_MAX}_green_${GREEN_MIN}_${GREEN_MAX}"
 
         echo
         echo "============================================================"
