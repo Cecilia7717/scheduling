@@ -1,0 +1,63 @@
+Random Scheduling Benchmark
+===========================
+
+Experiment Settings
+-------------------
+Random seed: 42
+Instances: 30
+Timing repetitions per algorithm per instance: 5
+
+Jobs per instance: 5 to 15
+Horizon: 20 to 60
+Green share range: 0.5000 to 0.6000
+Brown share range: 0.2000 to 0.2500
+Target utilization range: 0.7000 to 0.8000
+
+Feasibility
+-----------
+All generated instances are feasible by construction.
+Max Flow + Passes feasible on every instance: True
+Pure Min-Cost Flow feasible on every instance: True
+
+Average Runtime
+---------------
+Max Flow + Passes mean runtime: 0.503621 ms
+Pure Min-Cost Flow mean runtime: 0.755831 ms
+
+Average of per-instance median runtimes:
+Max Flow + Passes: 0.502037 ms
+Pure Min-Cost Flow: 0.752912 ms
+
+Mean runtime ratio (Max Flow + Passes / Pure Min-Cost Flow):
+0.666314x
+
+Normalized Final-Schedule Cost
+------------------------------
+Common cost function:
+    green = 0 per unit
+    brown = 1 per unit
+    red   = 2 per unit
+
+Average Max Flow + Passes cost: 13.266667
+Average Pure Min-Cost Flow cost: 13.266667
+Average cost difference (Max Flow + Passes - Pure): 0.000000
+
+Pure Min-Cost Flow lower cost: 0/30
+Equal cost: 30/30
+Pure Min-Cost Flow higher cost: 0/30
+
+Average Energy Usage
+--------------------
+                    Max Flow + Passes    Pure Min-Cost Flow
+Green units         32.866667              32.866667
+Brown units         10.333333              10.333333
+Red units           1.466667              1.466667
+
+Files
+-----
+results.csv
+    One row per random instance.
+
+instance_XX.json
+    Full generated instance, construction witness schedule,
+    both final schedules, costs, energy usage, and timings.
