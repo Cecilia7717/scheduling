@@ -1,0 +1,55 @@
+========================================================================
+Example 1: six-job instance from Lawler's paper
+========================================================================
+Jobs:
+  J1: r=3, p=2, d=7, w=2
+  J2: r=2, p=2, d=8, w=4
+  J3: r=2, p=3, d=9, w=1
+  J4: r=4, p=2, d=9, w=1
+  J5: r=4, p=2, d=11, w=6
+  J6: r=0, p=1, d=12, w=1
+
+Maximum on-time weight: 14
+Minimum late weight:    1
+On-time subset:         J1, J2, J4, J5, J6
+Late jobs:              J3
+Preemptive EDD schedule:
+  [0, 1)  J6
+  [2, 3)  J2
+  [3, 5)  J1
+  [5, 6)  J2
+  [6, 8)  J4
+  [8, 10)  J5
+
+========================================================================
+Example 2: preemption is needed to keep both jobs on time
+========================================================================
+Jobs:
+  A: r=2, p=2, d=5, w=1
+  B: r=1, p=3, d=6, w=3
+
+Maximum on-time weight: 4
+Minimum late weight:    0
+On-time subset:         A, B
+Late jobs:              (none)
+Preemptive EDD schedule:
+  [1, 2)  B
+  [2, 4)  A
+  [4, 6)  B
+
+========================================================================
+Example 3: choose the maximum-weight feasible subset
+========================================================================
+Jobs:
+  A: r=0, p=3, d=4, w=4
+  B: r=1, p=3, d=5, w=2
+  C: r=2, p=2, d=6, w=5
+
+Maximum on-time weight: 9
+Minimum late weight:    2
+On-time subset:         A, C
+Late jobs:              B
+Preemptive EDD schedule:
+  [0, 3)  A
+  [3, 5)  C
+

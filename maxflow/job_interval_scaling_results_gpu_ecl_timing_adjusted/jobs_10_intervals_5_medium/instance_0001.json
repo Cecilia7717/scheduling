@@ -1,0 +1,1496 @@
+{
+  "instance_id": 1,
+  "horizon": 60,
+  "jobs": [
+    {
+      "name": "J3",
+      "release": 1.0,
+      "deadline": 35.0,
+      "processing": 5.0
+    },
+    {
+      "name": "J10",
+      "release": 23.0,
+      "deadline": 60.0,
+      "processing": 4.0
+    },
+    {
+      "name": "J1",
+      "release": 1.0,
+      "deadline": 43.0,
+      "processing": 6.0
+    },
+    {
+      "name": "J7",
+      "release": 17.0,
+      "deadline": 57.0,
+      "processing": 2.0
+    },
+    {
+      "name": "J8",
+      "release": 40.0,
+      "deadline": 60.0,
+      "processing": 3.0
+    },
+    {
+      "name": "J6",
+      "release": 6.0,
+      "deadline": 52.0,
+      "processing": 3.0
+    },
+    {
+      "name": "J9",
+      "release": 23.0,
+      "deadline": 56.0,
+      "processing": 6.0
+    },
+    {
+      "name": "J2",
+      "release": 3.0,
+      "deadline": 20.0,
+      "processing": 6.0
+    },
+    {
+      "name": "J5",
+      "release": 27.0,
+      "deadline": 42.0,
+      "processing": 6.0
+    },
+    {
+      "name": "J4",
+      "release": 9.0,
+      "deadline": 32.0,
+      "processing": 6.0
+    }
+  ],
+  "energy_intervals": [
+    {
+      "name": "E0",
+      "start": 0.0,
+      "end": 14.0,
+      "energy": "brown",
+      "length": 14.0
+    },
+    {
+      "name": "E1",
+      "start": 14.0,
+      "end": 17.0,
+      "energy": "red",
+      "length": 3.0
+    },
+    {
+      "name": "E2",
+      "start": 17.0,
+      "end": 23.0,
+      "energy": "red",
+      "length": 6.0
+    },
+    {
+      "name": "E3",
+      "start": 23.0,
+      "end": 56.0,
+      "energy": "green",
+      "length": 33.0
+    },
+    {
+      "name": "E4",
+      "start": 56.0,
+      "end": 60.0,
+      "energy": "red",
+      "length": 4.0
+    }
+  ],
+  "split_intervals": [
+    {
+      "name": "I0",
+      "start": 0.0,
+      "end": 1.0,
+      "energy": "brown",
+      "length": 1.0
+    },
+    {
+      "name": "I1",
+      "start": 1.0,
+      "end": 3.0,
+      "energy": "brown",
+      "length": 2.0
+    },
+    {
+      "name": "I2",
+      "start": 3.0,
+      "end": 6.0,
+      "energy": "brown",
+      "length": 3.0
+    },
+    {
+      "name": "I3",
+      "start": 6.0,
+      "end": 9.0,
+      "energy": "brown",
+      "length": 3.0
+    },
+    {
+      "name": "I4",
+      "start": 9.0,
+      "end": 14.0,
+      "energy": "brown",
+      "length": 5.0
+    },
+    {
+      "name": "I5",
+      "start": 14.0,
+      "end": 17.0,
+      "energy": "red",
+      "length": 3.0
+    },
+    {
+      "name": "I6",
+      "start": 17.0,
+      "end": 20.0,
+      "energy": "red",
+      "length": 3.0
+    },
+    {
+      "name": "I7",
+      "start": 20.0,
+      "end": 23.0,
+      "energy": "red",
+      "length": 3.0
+    },
+    {
+      "name": "I8",
+      "start": 23.0,
+      "end": 27.0,
+      "energy": "green",
+      "length": 4.0
+    },
+    {
+      "name": "I9",
+      "start": 27.0,
+      "end": 32.0,
+      "energy": "green",
+      "length": 5.0
+    },
+    {
+      "name": "I10",
+      "start": 32.0,
+      "end": 35.0,
+      "energy": "green",
+      "length": 3.0
+    },
+    {
+      "name": "I11",
+      "start": 35.0,
+      "end": 40.0,
+      "energy": "green",
+      "length": 5.0
+    },
+    {
+      "name": "I12",
+      "start": 40.0,
+      "end": 42.0,
+      "energy": "green",
+      "length": 2.0
+    },
+    {
+      "name": "I13",
+      "start": 42.0,
+      "end": 43.0,
+      "energy": "green",
+      "length": 1.0
+    },
+    {
+      "name": "I14",
+      "start": 43.0,
+      "end": 52.0,
+      "energy": "green",
+      "length": 9.0
+    },
+    {
+      "name": "I15",
+      "start": 52.0,
+      "end": 56.0,
+      "energy": "green",
+      "length": 4.0
+    },
+    {
+      "name": "I16",
+      "start": 56.0,
+      "end": 57.0,
+      "energy": "red",
+      "length": 1.0
+    },
+    {
+      "name": "I17",
+      "start": 57.0,
+      "end": 60.0,
+      "energy": "red",
+      "length": 3.0
+    }
+  ],
+  "construction_witness_schedule": [
+    {
+      "job": "J1",
+      "start": 1.0,
+      "end": 7.0,
+      "processing": 6.0
+    },
+    {
+      "job": "J2",
+      "start": 10.0,
+      "end": 16.0,
+      "processing": 6.0
+    },
+    {
+      "job": "J3",
+      "start": 16.0,
+      "end": 21.0,
+      "processing": 5.0
+    },
+    {
+      "job": "J4",
+      "start": 21.0,
+      "end": 27.0,
+      "processing": 6.0
+    },
+    {
+      "job": "J5",
+      "start": 29.0,
+      "end": 35.0,
+      "processing": 6.0
+    },
+    {
+      "job": "J6",
+      "start": 37.0,
+      "end": 40.0,
+      "processing": 3.0
+    },
+    {
+      "job": "J7",
+      "start": 41.0,
+      "end": 43.0,
+      "processing": 2.0
+    },
+    {
+      "job": "J8",
+      "start": 44.0,
+      "end": 47.0,
+      "processing": 3.0
+    },
+    {
+      "job": "J9",
+      "start": 49.0,
+      "end": 55.0,
+      "processing": 6.0
+    },
+    {
+      "job": "J10",
+      "start": 56.0,
+      "end": 60.0,
+      "processing": 4.0
+    }
+  ],
+  "gpu_max_flow_passes": {
+    "feasible": true,
+    "total_processing": 47,
+    "flow": 47,
+    "final_pass": 3,
+    "normalized_cost": 15.0,
+    "energy_usage": {
+      "green": 33,
+      "brown": 13,
+      "red": 1
+    },
+    "gpu_maxflow_seconds": 0.008493434860452953,
+    "wall_seconds": 0.7171488900203258,
+    "pass1": {
+      "added_flow": 33,
+      "flow": 33,
+      "gpu_seconds": 0.003377,
+      "energy_usage": {
+        "green": 33,
+        "brown": 0,
+        "red": 0
+      },
+      "interval_usage": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 4,
+        "9": 5,
+        "10": 3,
+        "11": 5,
+        "12": 2,
+        "13": 1,
+        "14": 9,
+        "15": 4,
+        "16": 0,
+        "17": 0
+      },
+      "job_usage": {
+        "0": 4,
+        "1": 1,
+        "2": 6,
+        "3": 2,
+        "4": 3,
+        "5": 1,
+        "6": 6,
+        "7": 0,
+        "8": 6,
+        "9": 4
+      },
+      "schedule_rows": [
+        {
+          "Job": "J3",
+          "Interval": "I9",
+          "Start": 27.0,
+          "End": 32.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J3",
+          "Interval": "I10",
+          "Start": 32.0,
+          "End": 35.0,
+          "Energy": "green",
+          "Flow": 3
+        },
+        {
+          "Job": "J10",
+          "Interval": "I14",
+          "Start": 43.0,
+          "End": 52.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J1",
+          "Interval": "I9",
+          "Start": 27.0,
+          "End": 32.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J1",
+          "Interval": "I11",
+          "Start": 35.0,
+          "End": 40.0,
+          "Energy": "green",
+          "Flow": 2
+        },
+        {
+          "Job": "J1",
+          "Interval": "I12",
+          "Start": 40.0,
+          "End": 42.0,
+          "Energy": "green",
+          "Flow": 2
+        },
+        {
+          "Job": "J1",
+          "Interval": "I13",
+          "Start": 42.0,
+          "End": 43.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J7",
+          "Interval": "I14",
+          "Start": 43.0,
+          "End": 52.0,
+          "Energy": "green",
+          "Flow": 2
+        },
+        {
+          "Job": "J8",
+          "Interval": "I14",
+          "Start": 43.0,
+          "End": 52.0,
+          "Energy": "green",
+          "Flow": 3
+        },
+        {
+          "Job": "J6",
+          "Interval": "I14",
+          "Start": 43.0,
+          "End": 52.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J9",
+          "Interval": "I14",
+          "Start": 43.0,
+          "End": 52.0,
+          "Energy": "green",
+          "Flow": 2
+        },
+        {
+          "Job": "J9",
+          "Interval": "I15",
+          "Start": 52.0,
+          "End": 56.0,
+          "Energy": "green",
+          "Flow": 4
+        },
+        {
+          "Job": "J5",
+          "Interval": "I9",
+          "Start": 27.0,
+          "End": 32.0,
+          "Energy": "green",
+          "Flow": 3
+        },
+        {
+          "Job": "J5",
+          "Interval": "I11",
+          "Start": 35.0,
+          "End": 40.0,
+          "Energy": "green",
+          "Flow": 3
+        },
+        {
+          "Job": "J4",
+          "Interval": "I8",
+          "Start": 23.0,
+          "End": 27.0,
+          "Energy": "green",
+          "Flow": 4
+        }
+      ]
+    },
+    "pass2": {
+      "added_flow": 13,
+      "flow": 46,
+      "gpu_seconds": 0.003502,
+      "energy_usage": {
+        "green": 33,
+        "brown": 13,
+        "red": 0
+      },
+      "interval_usage": {
+        "0": 0,
+        "1": 2,
+        "2": 3,
+        "3": 3,
+        "4": 5,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 4,
+        "9": 5,
+        "10": 3,
+        "11": 5,
+        "12": 2,
+        "13": 1,
+        "14": 9,
+        "15": 4,
+        "16": 0,
+        "17": 0
+      },
+      "job_usage": {
+        "0": 5,
+        "1": 4,
+        "2": 6,
+        "3": 2,
+        "4": 3,
+        "5": 2,
+        "6": 6,
+        "7": 6,
+        "8": 6,
+        "9": 6
+      },
+      "schedule_rows": [
+        {
+          "Job": "J3",
+          "Interval": "I3",
+          "Start": 6.0,
+          "End": 9.0,
+          "Energy": "brown",
+          "Flow": 1
+        },
+        {
+          "Job": "J3",
+          "Interval": "I8",
+          "Start": 23.0,
+          "End": 27.0,
+          "Energy": "green",
+          "Flow": 2
+        },
+        {
+          "Job": "J3",
+          "Interval": "I10",
+          "Start": 32.0,
+          "End": 35.0,
+          "Energy": "green",
+          "Flow": 2
+        },
+        {
+          "Job": "J10",
+          "Interval": "I11",
+          "Start": 35.0,
+          "End": 40.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J10",
+          "Interval": "I14",
+          "Start": 43.0,
+          "End": 52.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J10",
+          "Interval": "I15",
+          "Start": 52.0,
+          "End": 56.0,
+          "Energy": "green",
+          "Flow": 2
+        },
+        {
+          "Job": "J1",
+          "Interval": "I1",
+          "Start": 1.0,
+          "End": 3.0,
+          "Energy": "brown",
+          "Flow": 2
+        },
+        {
+          "Job": "J1",
+          "Interval": "I2",
+          "Start": 3.0,
+          "End": 6.0,
+          "Energy": "brown",
+          "Flow": 1
+        },
+        {
+          "Job": "J1",
+          "Interval": "I8",
+          "Start": 23.0,
+          "End": 27.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J1",
+          "Interval": "I9",
+          "Start": 27.0,
+          "End": 32.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J1",
+          "Interval": "I13",
+          "Start": 42.0,
+          "End": 43.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J7",
+          "Interval": "I14",
+          "Start": 43.0,
+          "End": 52.0,
+          "Energy": "green",
+          "Flow": 2
+        },
+        {
+          "Job": "J8",
+          "Interval": "I14",
+          "Start": 43.0,
+          "End": 52.0,
+          "Energy": "green",
+          "Flow": 3
+        },
+        {
+          "Job": "J6",
+          "Interval": "I10",
+          "Start": 32.0,
+          "End": 35.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J6",
+          "Interval": "I14",
+          "Start": 43.0,
+          "End": 52.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J9",
+          "Interval": "I9",
+          "Start": 27.0,
+          "End": 32.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J9",
+          "Interval": "I11",
+          "Start": 35.0,
+          "End": 40.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J9",
+          "Interval": "I14",
+          "Start": 43.0,
+          "End": 52.0,
+          "Energy": "green",
+          "Flow": 2
+        },
+        {
+          "Job": "J9",
+          "Interval": "I15",
+          "Start": 52.0,
+          "End": 56.0,
+          "Energy": "green",
+          "Flow": 2
+        },
+        {
+          "Job": "J2",
+          "Interval": "I2",
+          "Start": 3.0,
+          "End": 6.0,
+          "Energy": "brown",
+          "Flow": 2
+        },
+        {
+          "Job": "J2",
+          "Interval": "I3",
+          "Start": 6.0,
+          "End": 9.0,
+          "Energy": "brown",
+          "Flow": 2
+        },
+        {
+          "Job": "J2",
+          "Interval": "I4",
+          "Start": 9.0,
+          "End": 14.0,
+          "Energy": "brown",
+          "Flow": 2
+        },
+        {
+          "Job": "J5",
+          "Interval": "I9",
+          "Start": 27.0,
+          "End": 32.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J5",
+          "Interval": "I11",
+          "Start": 35.0,
+          "End": 40.0,
+          "Energy": "green",
+          "Flow": 3
+        },
+        {
+          "Job": "J5",
+          "Interval": "I12",
+          "Start": 40.0,
+          "End": 42.0,
+          "Energy": "green",
+          "Flow": 2
+        },
+        {
+          "Job": "J4",
+          "Interval": "I4",
+          "Start": 9.0,
+          "End": 14.0,
+          "Energy": "brown",
+          "Flow": 3
+        },
+        {
+          "Job": "J4",
+          "Interval": "I8",
+          "Start": 23.0,
+          "End": 27.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J4",
+          "Interval": "I9",
+          "Start": 27.0,
+          "End": 32.0,
+          "Energy": "green",
+          "Flow": 2
+        }
+      ]
+    },
+    "pass3": {
+      "added_flow": 1,
+      "flow": 47,
+      "gpu_seconds": 0.000308,
+      "energy_usage": {
+        "green": 33,
+        "brown": 13,
+        "red": 1
+      },
+      "interval_usage": {
+        "0": 0,
+        "1": 2,
+        "2": 3,
+        "3": 3,
+        "4": 5,
+        "5": 0,
+        "6": 1,
+        "7": 0,
+        "8": 4,
+        "9": 5,
+        "10": 3,
+        "11": 5,
+        "12": 2,
+        "13": 1,
+        "14": 9,
+        "15": 4,
+        "16": 0,
+        "17": 0
+      },
+      "job_usage": {
+        "0": 5,
+        "1": 4,
+        "2": 6,
+        "3": 2,
+        "4": 3,
+        "5": 3,
+        "6": 6,
+        "7": 6,
+        "8": 6,
+        "9": 6
+      },
+      "schedule_rows": [
+        {
+          "Job": "J3",
+          "Interval": "I3",
+          "Start": 6.0,
+          "End": 9.0,
+          "Energy": "brown",
+          "Flow": 1
+        },
+        {
+          "Job": "J3",
+          "Interval": "I8",
+          "Start": 23.0,
+          "End": 27.0,
+          "Energy": "green",
+          "Flow": 2
+        },
+        {
+          "Job": "J3",
+          "Interval": "I10",
+          "Start": 32.0,
+          "End": 35.0,
+          "Energy": "green",
+          "Flow": 2
+        },
+        {
+          "Job": "J10",
+          "Interval": "I11",
+          "Start": 35.0,
+          "End": 40.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J10",
+          "Interval": "I14",
+          "Start": 43.0,
+          "End": 52.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J10",
+          "Interval": "I15",
+          "Start": 52.0,
+          "End": 56.0,
+          "Energy": "green",
+          "Flow": 2
+        },
+        {
+          "Job": "J1",
+          "Interval": "I1",
+          "Start": 1.0,
+          "End": 3.0,
+          "Energy": "brown",
+          "Flow": 2
+        },
+        {
+          "Job": "J1",
+          "Interval": "I2",
+          "Start": 3.0,
+          "End": 6.0,
+          "Energy": "brown",
+          "Flow": 1
+        },
+        {
+          "Job": "J1",
+          "Interval": "I8",
+          "Start": 23.0,
+          "End": 27.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J1",
+          "Interval": "I9",
+          "Start": 27.0,
+          "End": 32.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J1",
+          "Interval": "I13",
+          "Start": 42.0,
+          "End": 43.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J7",
+          "Interval": "I14",
+          "Start": 43.0,
+          "End": 52.0,
+          "Energy": "green",
+          "Flow": 2
+        },
+        {
+          "Job": "J8",
+          "Interval": "I14",
+          "Start": 43.0,
+          "End": 52.0,
+          "Energy": "green",
+          "Flow": 3
+        },
+        {
+          "Job": "J6",
+          "Interval": "I6",
+          "Start": 17.0,
+          "End": 20.0,
+          "Energy": "red",
+          "Flow": 1
+        },
+        {
+          "Job": "J6",
+          "Interval": "I10",
+          "Start": 32.0,
+          "End": 35.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J6",
+          "Interval": "I14",
+          "Start": 43.0,
+          "End": 52.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J9",
+          "Interval": "I9",
+          "Start": 27.0,
+          "End": 32.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J9",
+          "Interval": "I11",
+          "Start": 35.0,
+          "End": 40.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J9",
+          "Interval": "I14",
+          "Start": 43.0,
+          "End": 52.0,
+          "Energy": "green",
+          "Flow": 2
+        },
+        {
+          "Job": "J9",
+          "Interval": "I15",
+          "Start": 52.0,
+          "End": 56.0,
+          "Energy": "green",
+          "Flow": 2
+        },
+        {
+          "Job": "J2",
+          "Interval": "I2",
+          "Start": 3.0,
+          "End": 6.0,
+          "Energy": "brown",
+          "Flow": 2
+        },
+        {
+          "Job": "J2",
+          "Interval": "I3",
+          "Start": 6.0,
+          "End": 9.0,
+          "Energy": "brown",
+          "Flow": 2
+        },
+        {
+          "Job": "J2",
+          "Interval": "I4",
+          "Start": 9.0,
+          "End": 14.0,
+          "Energy": "brown",
+          "Flow": 2
+        },
+        {
+          "Job": "J5",
+          "Interval": "I9",
+          "Start": 27.0,
+          "End": 32.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J5",
+          "Interval": "I11",
+          "Start": 35.0,
+          "End": 40.0,
+          "Energy": "green",
+          "Flow": 3
+        },
+        {
+          "Job": "J5",
+          "Interval": "I12",
+          "Start": 40.0,
+          "End": 42.0,
+          "Energy": "green",
+          "Flow": 2
+        },
+        {
+          "Job": "J4",
+          "Interval": "I4",
+          "Start": 9.0,
+          "End": 14.0,
+          "Energy": "brown",
+          "Flow": 3
+        },
+        {
+          "Job": "J4",
+          "Interval": "I8",
+          "Start": 23.0,
+          "End": 27.0,
+          "Energy": "green",
+          "Flow": 1
+        },
+        {
+          "Job": "J4",
+          "Interval": "I9",
+          "Start": 27.0,
+          "End": 32.0,
+          "Energy": "green",
+          "Flow": 2
+        }
+      ]
+    },
+    "final_schedule_rows": [
+      {
+        "Job": "J3",
+        "Interval": "I3",
+        "Start": 6.0,
+        "End": 9.0,
+        "Energy": "brown",
+        "Flow": 1
+      },
+      {
+        "Job": "J3",
+        "Interval": "I8",
+        "Start": 23.0,
+        "End": 27.0,
+        "Energy": "green",
+        "Flow": 2
+      },
+      {
+        "Job": "J3",
+        "Interval": "I10",
+        "Start": 32.0,
+        "End": 35.0,
+        "Energy": "green",
+        "Flow": 2
+      },
+      {
+        "Job": "J10",
+        "Interval": "I11",
+        "Start": 35.0,
+        "End": 40.0,
+        "Energy": "green",
+        "Flow": 1
+      },
+      {
+        "Job": "J10",
+        "Interval": "I14",
+        "Start": 43.0,
+        "End": 52.0,
+        "Energy": "green",
+        "Flow": 1
+      },
+      {
+        "Job": "J10",
+        "Interval": "I15",
+        "Start": 52.0,
+        "End": 56.0,
+        "Energy": "green",
+        "Flow": 2
+      },
+      {
+        "Job": "J1",
+        "Interval": "I1",
+        "Start": 1.0,
+        "End": 3.0,
+        "Energy": "brown",
+        "Flow": 2
+      },
+      {
+        "Job": "J1",
+        "Interval": "I2",
+        "Start": 3.0,
+        "End": 6.0,
+        "Energy": "brown",
+        "Flow": 1
+      },
+      {
+        "Job": "J1",
+        "Interval": "I8",
+        "Start": 23.0,
+        "End": 27.0,
+        "Energy": "green",
+        "Flow": 1
+      },
+      {
+        "Job": "J1",
+        "Interval": "I9",
+        "Start": 27.0,
+        "End": 32.0,
+        "Energy": "green",
+        "Flow": 1
+      },
+      {
+        "Job": "J1",
+        "Interval": "I13",
+        "Start": 42.0,
+        "End": 43.0,
+        "Energy": "green",
+        "Flow": 1
+      },
+      {
+        "Job": "J7",
+        "Interval": "I14",
+        "Start": 43.0,
+        "End": 52.0,
+        "Energy": "green",
+        "Flow": 2
+      },
+      {
+        "Job": "J8",
+        "Interval": "I14",
+        "Start": 43.0,
+        "End": 52.0,
+        "Energy": "green",
+        "Flow": 3
+      },
+      {
+        "Job": "J6",
+        "Interval": "I6",
+        "Start": 17.0,
+        "End": 20.0,
+        "Energy": "red",
+        "Flow": 1
+      },
+      {
+        "Job": "J6",
+        "Interval": "I10",
+        "Start": 32.0,
+        "End": 35.0,
+        "Energy": "green",
+        "Flow": 1
+      },
+      {
+        "Job": "J6",
+        "Interval": "I14",
+        "Start": 43.0,
+        "End": 52.0,
+        "Energy": "green",
+        "Flow": 1
+      },
+      {
+        "Job": "J9",
+        "Interval": "I9",
+        "Start": 27.0,
+        "End": 32.0,
+        "Energy": "green",
+        "Flow": 1
+      },
+      {
+        "Job": "J9",
+        "Interval": "I11",
+        "Start": 35.0,
+        "End": 40.0,
+        "Energy": "green",
+        "Flow": 1
+      },
+      {
+        "Job": "J9",
+        "Interval": "I14",
+        "Start": 43.0,
+        "End": 52.0,
+        "Energy": "green",
+        "Flow": 2
+      },
+      {
+        "Job": "J9",
+        "Interval": "I15",
+        "Start": 52.0,
+        "End": 56.0,
+        "Energy": "green",
+        "Flow": 2
+      },
+      {
+        "Job": "J2",
+        "Interval": "I2",
+        "Start": 3.0,
+        "End": 6.0,
+        "Energy": "brown",
+        "Flow": 2
+      },
+      {
+        "Job": "J2",
+        "Interval": "I3",
+        "Start": 6.0,
+        "End": 9.0,
+        "Energy": "brown",
+        "Flow": 2
+      },
+      {
+        "Job": "J2",
+        "Interval": "I4",
+        "Start": 9.0,
+        "End": 14.0,
+        "Energy": "brown",
+        "Flow": 2
+      },
+      {
+        "Job": "J5",
+        "Interval": "I9",
+        "Start": 27.0,
+        "End": 32.0,
+        "Energy": "green",
+        "Flow": 1
+      },
+      {
+        "Job": "J5",
+        "Interval": "I11",
+        "Start": 35.0,
+        "End": 40.0,
+        "Energy": "green",
+        "Flow": 3
+      },
+      {
+        "Job": "J5",
+        "Interval": "I12",
+        "Start": 40.0,
+        "End": 42.0,
+        "Energy": "green",
+        "Flow": 2
+      },
+      {
+        "Job": "J4",
+        "Interval": "I4",
+        "Start": 9.0,
+        "End": 14.0,
+        "Energy": "brown",
+        "Flow": 3
+      },
+      {
+        "Job": "J4",
+        "Interval": "I8",
+        "Start": 23.0,
+        "End": 27.0,
+        "Energy": "green",
+        "Flow": 1
+      },
+      {
+        "Job": "J4",
+        "Interval": "I9",
+        "Start": 27.0,
+        "End": 32.0,
+        "Energy": "green",
+        "Flow": 2
+      }
+    ],
+    "timeline": [
+      {
+        "start": 0.0,
+        "end": 1.0,
+        "job": "IDLE",
+        "energy": "brown",
+        "interval": "I0"
+      },
+      {
+        "start": 1.0,
+        "end": 3.0,
+        "job": "J1",
+        "energy": "brown",
+        "interval": "I1"
+      },
+      {
+        "start": 3.0,
+        "end": 5.0,
+        "job": "J2",
+        "energy": "brown",
+        "interval": "I2"
+      },
+      {
+        "start": 5.0,
+        "end": 6.0,
+        "job": "J1",
+        "energy": "brown",
+        "interval": "I2"
+      },
+      {
+        "start": 6.0,
+        "end": 8.0,
+        "job": "J2",
+        "energy": "brown",
+        "interval": "I3"
+      },
+      {
+        "start": 8.0,
+        "end": 9.0,
+        "job": "J3",
+        "energy": "brown",
+        "interval": "I3"
+      },
+      {
+        "start": 9.0,
+        "end": 11.0,
+        "job": "J2",
+        "energy": "brown",
+        "interval": "I4"
+      },
+      {
+        "start": 11.0,
+        "end": 14.0,
+        "job": "J4",
+        "energy": "brown",
+        "interval": "I4"
+      },
+      {
+        "start": 14.0,
+        "end": 17.0,
+        "job": "IDLE",
+        "energy": "red",
+        "interval": "I5"
+      },
+      {
+        "start": 17.0,
+        "end": 18.0,
+        "job": "J6",
+        "energy": "red",
+        "interval": "I6"
+      },
+      {
+        "start": 18.0,
+        "end": 20.0,
+        "job": "IDLE",
+        "energy": "red",
+        "interval": "I6"
+      },
+      {
+        "start": 20.0,
+        "end": 23.0,
+        "job": "IDLE",
+        "energy": "red",
+        "interval": "I7"
+      },
+      {
+        "start": 23.0,
+        "end": 24.0,
+        "job": "J4",
+        "energy": "green",
+        "interval": "I8"
+      },
+      {
+        "start": 24.0,
+        "end": 26.0,
+        "job": "J3",
+        "energy": "green",
+        "interval": "I8"
+      },
+      {
+        "start": 26.0,
+        "end": 27.0,
+        "job": "J1",
+        "energy": "green",
+        "interval": "I8"
+      },
+      {
+        "start": 27.0,
+        "end": 29.0,
+        "job": "J4",
+        "energy": "green",
+        "interval": "I9"
+      },
+      {
+        "start": 29.0,
+        "end": 30.0,
+        "job": "J5",
+        "energy": "green",
+        "interval": "I9"
+      },
+      {
+        "start": 30.0,
+        "end": 31.0,
+        "job": "J1",
+        "energy": "green",
+        "interval": "I9"
+      },
+      {
+        "start": 31.0,
+        "end": 32.0,
+        "job": "J9",
+        "energy": "green",
+        "interval": "I9"
+      },
+      {
+        "start": 32.0,
+        "end": 34.0,
+        "job": "J3",
+        "energy": "green",
+        "interval": "I10"
+      },
+      {
+        "start": 34.0,
+        "end": 35.0,
+        "job": "J6",
+        "energy": "green",
+        "interval": "I10"
+      },
+      {
+        "start": 35.0,
+        "end": 38.0,
+        "job": "J5",
+        "energy": "green",
+        "interval": "I11"
+      },
+      {
+        "start": 38.0,
+        "end": 39.0,
+        "job": "J9",
+        "energy": "green",
+        "interval": "I11"
+      },
+      {
+        "start": 39.0,
+        "end": 40.0,
+        "job": "J10",
+        "energy": "green",
+        "interval": "I11"
+      },
+      {
+        "start": 40.0,
+        "end": 42.0,
+        "job": "J5",
+        "energy": "green",
+        "interval": "I12"
+      },
+      {
+        "start": 42.0,
+        "end": 43.0,
+        "job": "J1",
+        "energy": "green",
+        "interval": "I13"
+      },
+      {
+        "start": 43.0,
+        "end": 44.0,
+        "job": "J6",
+        "energy": "green",
+        "interval": "I14"
+      },
+      {
+        "start": 44.0,
+        "end": 46.0,
+        "job": "J9",
+        "energy": "green",
+        "interval": "I14"
+      },
+      {
+        "start": 46.0,
+        "end": 48.0,
+        "job": "J7",
+        "energy": "green",
+        "interval": "I14"
+      },
+      {
+        "start": 48.0,
+        "end": 49.0,
+        "job": "J10",
+        "energy": "green",
+        "interval": "I14"
+      },
+      {
+        "start": 49.0,
+        "end": 52.0,
+        "job": "J8",
+        "energy": "green",
+        "interval": "I14"
+      },
+      {
+        "start": 52.0,
+        "end": 54.0,
+        "job": "J9",
+        "energy": "green",
+        "interval": "I15"
+      },
+      {
+        "start": 54.0,
+        "end": 56.0,
+        "job": "J10",
+        "energy": "green",
+        "interval": "I15"
+      },
+      {
+        "start": 56.0,
+        "end": 57.0,
+        "job": "IDLE",
+        "energy": "red",
+        "interval": "I16"
+      },
+      {
+        "start": 57.0,
+        "end": 60.0,
+        "job": "IDLE",
+        "energy": "red",
+        "interval": "I17"
+      }
+    ]
+  }
+}

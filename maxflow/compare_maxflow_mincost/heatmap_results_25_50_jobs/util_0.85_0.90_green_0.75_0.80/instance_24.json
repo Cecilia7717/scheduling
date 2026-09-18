@@ -1,0 +1,510 @@
+{
+  "instance_id": 24,
+  "horizon": 56,
+  "jobs": [
+    {
+      "name": "J3",
+      "release": 25.0,
+      "deadline": 43.0,
+      "processing": 6.0
+    },
+    {
+      "name": "J1",
+      "release": 5.0,
+      "deadline": 53.0,
+      "processing": 4.0
+    },
+    {
+      "name": "J4",
+      "release": 32.0,
+      "deadline": 47.0,
+      "processing": 4.0
+    },
+    {
+      "name": "J5",
+      "release": 7.0,
+      "deadline": 52.0,
+      "processing": 5.0
+    },
+    {
+      "name": "J2",
+      "release": 10.0,
+      "deadline": 30.0,
+      "processing": 5.0
+    }
+  ],
+  "energy_intervals": [
+    {
+      "name": "E0",
+      "start": 0.0,
+      "end": 1.0,
+      "energy": "red",
+      "length": 1.0
+    },
+    {
+      "name": "E1",
+      "start": 1.0,
+      "end": 3.0,
+      "energy": "brown",
+      "length": 2.0
+    },
+    {
+      "name": "E2",
+      "start": 3.0,
+      "end": 30.0,
+      "energy": "green",
+      "length": 27.0
+    },
+    {
+      "name": "E3",
+      "start": 30.0,
+      "end": 34.0,
+      "energy": "green",
+      "length": 4.0
+    },
+    {
+      "name": "E4",
+      "start": 34.0,
+      "end": 38.0,
+      "energy": "brown",
+      "length": 4.0
+    },
+    {
+      "name": "E5",
+      "start": 38.0,
+      "end": 40.0,
+      "energy": "red",
+      "length": 2.0
+    },
+    {
+      "name": "E6",
+      "start": 40.0,
+      "end": 48.0,
+      "energy": "green",
+      "length": 8.0
+    },
+    {
+      "name": "E7",
+      "start": 48.0,
+      "end": 49.0,
+      "energy": "red",
+      "length": 1.0
+    },
+    {
+      "name": "E8",
+      "start": 49.0,
+      "end": 54.0,
+      "energy": "green",
+      "length": 5.0
+    },
+    {
+      "name": "E9",
+      "start": 54.0,
+      "end": 56.0,
+      "energy": "brown",
+      "length": 2.0
+    }
+  ],
+  "construction_witness_schedule": [
+    {
+      "job": "J1",
+      "start": 5.0,
+      "end": 9.0,
+      "processing": 4.0
+    },
+    {
+      "job": "J2",
+      "start": 14.0,
+      "end": 19.0,
+      "processing": 5.0
+    },
+    {
+      "job": "J3",
+      "start": 26.0,
+      "end": 32.0,
+      "processing": 6.0
+    },
+    {
+      "job": "J4",
+      "start": 36.0,
+      "end": 40.0,
+      "processing": 4.0
+    },
+    {
+      "job": "J5",
+      "start": 44.0,
+      "end": 49.0,
+      "processing": 5.0
+    }
+  ],
+  "max_flow_passes": {
+    "feasible": true,
+    "total_processing": 24.0,
+    "flow": 24.0,
+    "normalized_cost": 0.0,
+    "green_units": 24.0,
+    "brown_units": 0.0,
+    "red_units": 0.0,
+    "timeline": [
+      {
+        "start": 0.0,
+        "end": 1.0,
+        "job": "IDLE",
+        "energy": "red",
+        "interval": "I0"
+      },
+      {
+        "start": 1.0,
+        "end": 3.0,
+        "job": "IDLE",
+        "energy": "brown",
+        "interval": "I1"
+      },
+      {
+        "start": 3.0,
+        "end": 5.0,
+        "job": "IDLE",
+        "energy": "green",
+        "interval": "I2"
+      },
+      {
+        "start": 5.0,
+        "end": 7.0,
+        "job": "J1",
+        "energy": "green",
+        "interval": "I3"
+      },
+      {
+        "start": 7.0,
+        "end": 8.0,
+        "job": "J5",
+        "energy": "green",
+        "interval": "I4"
+      },
+      {
+        "start": 8.0,
+        "end": 10.0,
+        "job": "J1",
+        "energy": "green",
+        "interval": "I4"
+      },
+      {
+        "start": 10.0,
+        "end": 15.0,
+        "job": "J2",
+        "energy": "green",
+        "interval": "I5"
+      },
+      {
+        "start": 15.0,
+        "end": 19.0,
+        "job": "J5",
+        "energy": "green",
+        "interval": "I5"
+      },
+      {
+        "start": 19.0,
+        "end": 25.0,
+        "job": "IDLE",
+        "energy": "green",
+        "interval": "I5"
+      },
+      {
+        "start": 25.0,
+        "end": 30.0,
+        "job": "J3",
+        "energy": "green",
+        "interval": "I6"
+      },
+      {
+        "start": 30.0,
+        "end": 31.0,
+        "job": "J3",
+        "energy": "green",
+        "interval": "I7"
+      },
+      {
+        "start": 31.0,
+        "end": 32.0,
+        "job": "IDLE",
+        "energy": "green",
+        "interval": "I7"
+      },
+      {
+        "start": 32.0,
+        "end": 34.0,
+        "job": "J4",
+        "energy": "green",
+        "interval": "I8"
+      },
+      {
+        "start": 34.0,
+        "end": 38.0,
+        "job": "IDLE",
+        "energy": "brown",
+        "interval": "I9"
+      },
+      {
+        "start": 38.0,
+        "end": 40.0,
+        "job": "IDLE",
+        "energy": "red",
+        "interval": "I10"
+      },
+      {
+        "start": 40.0,
+        "end": 42.0,
+        "job": "J4",
+        "energy": "green",
+        "interval": "I11"
+      },
+      {
+        "start": 42.0,
+        "end": 43.0,
+        "job": "IDLE",
+        "energy": "green",
+        "interval": "I11"
+      },
+      {
+        "start": 43.0,
+        "end": 47.0,
+        "job": "IDLE",
+        "energy": "green",
+        "interval": "I12"
+      },
+      {
+        "start": 47.0,
+        "end": 48.0,
+        "job": "IDLE",
+        "energy": "green",
+        "interval": "I13"
+      },
+      {
+        "start": 48.0,
+        "end": 49.0,
+        "job": "IDLE",
+        "energy": "red",
+        "interval": "I14"
+      },
+      {
+        "start": 49.0,
+        "end": 52.0,
+        "job": "IDLE",
+        "energy": "green",
+        "interval": "I15"
+      },
+      {
+        "start": 52.0,
+        "end": 53.0,
+        "job": "IDLE",
+        "energy": "green",
+        "interval": "I16"
+      },
+      {
+        "start": 53.0,
+        "end": 54.0,
+        "job": "IDLE",
+        "energy": "green",
+        "interval": "I17"
+      },
+      {
+        "start": 54.0,
+        "end": 56.0,
+        "job": "IDLE",
+        "energy": "brown",
+        "interval": "I18"
+      }
+    ],
+    "timing": {
+      "mean_seconds": 0.00014550214909831994,
+      "median_seconds": 0.00014504150749417022,
+      "min_seconds": 0.00014404200192075223,
+      "max_seconds": 0.000152749998960644
+    }
+  },
+  "pure_min_cost": {
+    "feasible": true,
+    "total_processing": 24.0,
+    "flow": 24.0,
+    "normalized_cost": 0.0,
+    "green_units": 24.0,
+    "brown_units": 0.0,
+    "red_units": 0.0,
+    "timeline": [
+      {
+        "start": 0.0,
+        "end": 1.0,
+        "job": "IDLE",
+        "energy": "red",
+        "interval": "I0"
+      },
+      {
+        "start": 1.0,
+        "end": 3.0,
+        "job": "IDLE",
+        "energy": "brown",
+        "interval": "I1"
+      },
+      {
+        "start": 3.0,
+        "end": 5.0,
+        "job": "IDLE",
+        "energy": "green",
+        "interval": "I2"
+      },
+      {
+        "start": 5.0,
+        "end": 7.0,
+        "job": "J1",
+        "energy": "green",
+        "interval": "I3"
+      },
+      {
+        "start": 7.0,
+        "end": 8.0,
+        "job": "J5",
+        "energy": "green",
+        "interval": "I4"
+      },
+      {
+        "start": 8.0,
+        "end": 10.0,
+        "job": "J1",
+        "energy": "green",
+        "interval": "I4"
+      },
+      {
+        "start": 10.0,
+        "end": 15.0,
+        "job": "J2",
+        "energy": "green",
+        "interval": "I5"
+      },
+      {
+        "start": 15.0,
+        "end": 19.0,
+        "job": "J5",
+        "energy": "green",
+        "interval": "I5"
+      },
+      {
+        "start": 19.0,
+        "end": 25.0,
+        "job": "IDLE",
+        "energy": "green",
+        "interval": "I5"
+      },
+      {
+        "start": 25.0,
+        "end": 30.0,
+        "job": "J3",
+        "energy": "green",
+        "interval": "I6"
+      },
+      {
+        "start": 30.0,
+        "end": 31.0,
+        "job": "J3",
+        "energy": "green",
+        "interval": "I7"
+      },
+      {
+        "start": 31.0,
+        "end": 32.0,
+        "job": "IDLE",
+        "energy": "green",
+        "interval": "I7"
+      },
+      {
+        "start": 32.0,
+        "end": 34.0,
+        "job": "J4",
+        "energy": "green",
+        "interval": "I8"
+      },
+      {
+        "start": 34.0,
+        "end": 38.0,
+        "job": "IDLE",
+        "energy": "brown",
+        "interval": "I9"
+      },
+      {
+        "start": 38.0,
+        "end": 40.0,
+        "job": "IDLE",
+        "energy": "red",
+        "interval": "I10"
+      },
+      {
+        "start": 40.0,
+        "end": 42.0,
+        "job": "J4",
+        "energy": "green",
+        "interval": "I11"
+      },
+      {
+        "start": 42.0,
+        "end": 43.0,
+        "job": "IDLE",
+        "energy": "green",
+        "interval": "I11"
+      },
+      {
+        "start": 43.0,
+        "end": 47.0,
+        "job": "IDLE",
+        "energy": "green",
+        "interval": "I12"
+      },
+      {
+        "start": 47.0,
+        "end": 48.0,
+        "job": "IDLE",
+        "energy": "green",
+        "interval": "I13"
+      },
+      {
+        "start": 48.0,
+        "end": 49.0,
+        "job": "IDLE",
+        "energy": "red",
+        "interval": "I14"
+      },
+      {
+        "start": 49.0,
+        "end": 52.0,
+        "job": "IDLE",
+        "energy": "green",
+        "interval": "I15"
+      },
+      {
+        "start": 52.0,
+        "end": 53.0,
+        "job": "IDLE",
+        "energy": "green",
+        "interval": "I16"
+      },
+      {
+        "start": 53.0,
+        "end": 54.0,
+        "job": "IDLE",
+        "energy": "green",
+        "interval": "I17"
+      },
+      {
+        "start": 54.0,
+        "end": 56.0,
+        "job": "IDLE",
+        "energy": "brown",
+        "interval": "I18"
+      }
+    ],
+    "timing": {
+      "mean_seconds": 0.0002352562514715828,
+      "median_seconds": 0.00022622899996349588,
+      "min_seconds": 0.00022458299645222723,
+      "max_seconds": 0.000346583008649759
+    }
+  }
+}
