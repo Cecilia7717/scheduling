@@ -6,18 +6,22 @@ set -euo pipefail
 # Job counts
 # ============================================================
 # 
+# 10
+#     20
+#     50
+#     100
+#     200
+#     500
+#     1000
+#     2000
+#     5000
     
 JOB_COUNTS=(
-    10
-    20
-    50
-    100
-    200
-    500
-    1000
-    2000
-    5000
-    10000
+    12500
+    15000
+    20000
+    50000
+    100000
 )
 
 
@@ -30,18 +34,19 @@ JOB_COUNTS=(
 
 INTERVAL_LEVELS=(
     "0.10 sparse"
-    "0.25 light"
-    "0.50 medium"
-    "1.00 dense"
-    "2.00 very_dense"
 )
 
+
+    # "0.25 light"
+    # "0.50 medium"
+    # "1.00 dense"
+    # "2.00 very_dense"
 
 # ============================================================
 # Experiment settings
 # ============================================================
 
-INSTANCES=3
+INSTANCES=1
 SEED=42
 
 HORIZON_PER_JOB=6
@@ -60,7 +65,7 @@ BROWN_MAX=0.25
 # ECL-MaxFlow location
 # ============================================================
 
-ECL_DIR="/home/nbl0582/scheduling/maxflow_gpu/ECL-MaxFlow"
+ECL_DIR="/home/nbl0582/scheduling/maxflow/ECL-MaxFlow"
 
 
 # ============================================================
@@ -150,7 +155,7 @@ for JOBS in "${JOB_COUNTS[@]}"; do
         echo "================================================================"
 
 
-        python3 "$BENCHMARK_SCRIPT" \
+        /usr/bin/time -v python3 "$BENCHMARK_SCRIPT" \
             --ecl-dir "$ECL_DIR" \
             --jobs "$JOBS" \
             --horizon-per-job "$HORIZON_PER_JOB" \

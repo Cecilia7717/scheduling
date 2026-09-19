@@ -3,10 +3,15 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import json
+import re
+import statistics
 import time
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
+
+import matplotlib.pyplot as plt
 
 
 from compare_maxflow_mincost.maxflow import (
@@ -441,6 +446,269 @@ def process_all(
 
 
 # ============================================================
+# Timing collection / plotting
+# ============================================================
+
+FOLDER_RE = re.compile(
+    r"^jobs_(?P<jobs>\d+)_intervals_(?P<intervals>\d+)_(?P<density>.+)$"
+)
+
+
+def _experiment_metadata(path: Path, root: Path) -> Dict[str, Any]:
+    """Parse jobs / intervals / density from the instance's parent folder."""
+    folder = path.parent.name
+    match = FOLDER_RE.match(folder)
+
+    if match is None:
+        return {
+            "folder": folder,
+            "num_jobs": None,
+            "num_intervals": None,
+            "density": "unknown",
+        }
+
+    return {
+        "folder": folder,
+        "num_jobs": int(match.group("jobs")),
+        "num_intervals": int(match.group("intervals")),
+        "density": match.group("density"),
+    }
+
+
+def collect_timing_data(root: Path) -> List[Dict[str, Any]]:
+    """
+    Read timing values already stored in every instance JSON.
+
+    Collected values:
+        CPU wall       = cpu_max_flow_passes.wall_seconds
+        GPU max-flow   = gpu_max_flow_passes.gpu_maxflow_seconds
+        GPU wall       = gpu_max_flow_passes.wall_seconds
+    """
+    rows: List[Dict[str, Any]] = []
+
+    instance_files = sorted(
+        p for p in root.rglob("instance_*.json") if p.is_file()
+    )
+
+    for path in instance_files:
+        with path.open("r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        cpu = data.get("cpu_max_flow_passes")
+        gpu = data.get("gpu_max_flow_passes")
+
+        if cpu is None or gpu is None:
+            print(
+                f"WARNING: skipping timing collection for {path}: "
+                f"cpu={cpu is not None}, gpu={gpu is not None}"
+            )
+            continue
+
+        if "wall_seconds" not in cpu:
+            print(f"WARNING: missing CPU wall_seconds in {path}")
+            continue
+
+        if "wall_seconds" not in gpu or "gpu_maxflow_seconds" not in gpu:
+            print(f"WARNING: missing GPU timing field(s) in {path}")
+            continue
+
+        meta = _experiment_metadata(path, root)
+
+        rows.append(
+            {
+                "file": str(path.relative_to(root)),
+                "instance_id": data.get("instance_id"),
+                **meta,
+                "cpu_wall_seconds": float(cpu["wall_seconds"]),
+                "gpu_maxflow_seconds": float(gpu["gpu_maxflow_seconds"]),
+                "gpu_wall_seconds": float(gpu["wall_seconds"]),
+            }
+        )
+
+    return rows
+
+
+def write_timing_csv(root: Path, rows: List[Dict[str, Any]]) -> Path:
+    path = root / "cpu_gpu_timing_all_instances.csv"
+
+    fieldnames = [
+        "file",
+        "instance_id",
+        "folder",
+        "num_jobs",
+        "num_intervals",
+        "density",
+        "cpu_wall_seconds",
+        "gpu_maxflow_seconds",
+        "gpu_wall_seconds",
+    ]
+
+    with path.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+
+    return path
+
+
+def summarize_timings(rows: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Aggregate timing by experiment folder using means and medians."""
+    grouped: Dict[str, List[Dict[str, Any]]] = {}
+
+    for row in rows:
+        grouped.setdefault(row["folder"], []).append(row)
+
+    summary: List[Dict[str, Any]] = []
+
+    for folder, group in grouped.items():
+        first = group[0]
+
+        cpu = [r["cpu_wall_seconds"] for r in group]
+        gpu_alg = [r["gpu_maxflow_seconds"] for r in group]
+        gpu_wall = [r["gpu_wall_seconds"] for r in group]
+
+        summary.append(
+            {
+                "folder": folder,
+                "num_jobs": first["num_jobs"],
+                "num_intervals": first["num_intervals"],
+                "density": first["density"],
+                "num_instances": len(group),
+                "mean_cpu_wall_seconds": statistics.mean(cpu),
+                "median_cpu_wall_seconds": statistics.median(cpu),
+                "mean_gpu_maxflow_seconds": statistics.mean(gpu_alg),
+                "median_gpu_maxflow_seconds": statistics.median(gpu_alg),
+                "mean_gpu_wall_seconds": statistics.mean(gpu_wall),
+                "median_gpu_wall_seconds": statistics.median(gpu_wall),
+            }
+        )
+
+    density_order = {
+        "sparse": 0,
+        "light": 1,
+        "medium": 2,
+        "dense": 3,
+        "very_dense": 4,
+    }
+
+    summary.sort(
+        key=lambda r: (
+            density_order.get(r["density"], 999),
+            r["num_jobs"] if r["num_jobs"] is not None else 10**18,
+            r["num_intervals"] if r["num_intervals"] is not None else 10**18,
+            r["folder"],
+        )
+    )
+
+    return summary
+
+
+def write_timing_summary_csv(
+    root: Path,
+    summary: List[Dict[str, Any]],
+) -> Path:
+    path = root / "cpu_gpu_timing_summary.csv"
+
+    fieldnames = [
+        "folder",
+        "num_jobs",
+        "num_intervals",
+        "density",
+        "num_instances",
+        "mean_cpu_wall_seconds",
+        "median_cpu_wall_seconds",
+        "mean_gpu_maxflow_seconds",
+        "median_gpu_maxflow_seconds",
+        "mean_gpu_wall_seconds",
+        "median_gpu_wall_seconds",
+    ]
+
+    with path.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(summary)
+
+    return path
+
+
+def plot_timings_by_density(
+    root: Path,
+    summary: List[Dict[str, Any]],
+) -> List[Path]:
+    """
+    Produce one scaling plot for each density.
+
+    X axis: number of jobs
+    Y axis: mean runtime in seconds, logarithmic scale
+
+    Lines:
+        CPU wall
+        GPU max-flow algorithm time
+        GPU whole wall time
+    """
+    by_density: Dict[str, List[Dict[str, Any]]] = {}
+
+    for row in summary:
+        if row["num_jobs"] is None:
+            continue
+        by_density.setdefault(row["density"], []).append(row)
+
+    outputs: List[Path] = []
+
+    for density, group in sorted(by_density.items()):
+        group.sort(key=lambda r: r["num_jobs"])
+
+        x = [r["num_jobs"] for r in group]
+        cpu = [r["mean_cpu_wall_seconds"] for r in group]
+        gpu_alg = [r["mean_gpu_maxflow_seconds"] for r in group]
+        gpu_wall = [r["mean_gpu_wall_seconds"] for r in group]
+
+        plt.figure(figsize=(8.5, 5.5))
+        plt.plot(x, cpu, marker="o", label="CPU wall")
+        plt.plot(x, gpu_alg, marker="o", label="GPU max-flow algorithm")
+        plt.plot(x, gpu_wall, marker="o", label="GPU wall")
+
+        plt.xscale("log")
+        plt.yscale("log")
+        plt.xlabel("Number of jobs")
+        plt.ylabel("Mean runtime (seconds)")
+        plt.title(f"CPU vs GPU runtime — {density.replace('_', ' ')}")
+        plt.grid(True, which="both", alpha=0.3)
+        plt.legend()
+        plt.tight_layout()
+
+        output = root / f"cpu_gpu_runtime_{density}.png"
+        plt.savefig(output, dpi=200, bbox_inches="tight")
+        plt.close()
+        outputs.append(output)
+
+    return outputs
+
+
+def collect_write_and_plot(root: Path) -> None:
+    rows = collect_timing_data(root)
+
+    if not rows:
+        print("No instances containing both CPU and GPU timings were found.")
+        return
+
+    all_csv = write_timing_csv(root, rows)
+    summary = summarize_timings(rows)
+    summary_csv = write_timing_summary_csv(root, summary)
+    plots = plot_timings_by_density(root, summary)
+
+    print()
+    print("=" * 80)
+    print("CPU/GPU TIMING COLLECTION")
+    print("=" * 80)
+    print(f"Instances collected: {len(rows)}")
+    print(f"Raw timing CSV:       {all_csv}")
+    print(f"Summary CSV:          {summary_csv}")
+    for plot in plots:
+        print(f"Plot:                 {plot}")
+
+
+# ============================================================
 # CLI
 # ============================================================
 
@@ -487,6 +755,11 @@ def main():
         overwrite_cpu=args.overwrite_cpu,
         dry_run=args.dry_run,
     )
+
+    # After the CPU run, collect CPU/GPU timing data already stored
+    # in the JSON files and generate CSV summaries + plots.
+    if not args.dry_run:
+        collect_write_and_plot(args.root)
 
 
 if __name__ == "__main__":
