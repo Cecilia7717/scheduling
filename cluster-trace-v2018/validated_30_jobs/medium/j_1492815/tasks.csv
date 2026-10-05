@@ -1,0 +1,8 @@
+task_name,dag_node_id,predecessors,instance_num,actual_usable_instances,start_time,end_time,plan_cpu,plan_mem,task_type,status
+M3,3,,4,4,458105,458137,100,0.3,1,Terminated
+M1,1,,1,1,458105,458123,100,0.3,1,Terminated
+J6_2_3_4_5,6,2;3;4;5,215,215,458105,458164,100,0.79,1,Terminated
+M2,2,,119,119,458105,458152,100,0.3,1,Terminated
+M5,5,,1,1,458105,458111,100,0.3,1,Terminated
+M4,4,,91,91,458105,458130,100,0.3,1,Terminated
+J7_1_6,7,1;6,217,217,458105,458166,100,0.69,1,Terminated
