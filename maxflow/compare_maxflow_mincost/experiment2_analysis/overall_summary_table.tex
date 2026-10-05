@@ -1,0 +1,17 @@
+\begin{table}
+\caption{Aggregate behavior of the exact solvers and incremental max-flow phases.}
+\label{tab:pass-mechanism-summary}
+\begin{tabular}{lrrrrr}
+\toprule
+Metric & Mean & Median & Std. & Min & Max \\
+\midrule
+MinCost / MaxFlow-Passes runtime & 4.961 & 4.880 & 0.979 & 2.314 & 8.953 \\
+Restart / MaxFlow-Passes runtime & 2.069 & 2.009 & 0.329 & 1.395 & 2.830 \\
+Flow added in green pass (\%) & 73.847 & 79.104 & 23.000 & 20.896 & 100.000 \\
+Flow added in brown pass (\%) & 18.140 & 11.842 & 18.491 & 0.000 & 78.358 \\
+Flow added in red pass (\%) & 8.013 & 0.000 & 13.722 & 0.000 & 76.226 \\
+Green allocation rerouted in Pass 2 (\%) & 3.626 & 0.000 & 6.930 & 0.000 & 65.079 \\
+Prior allocation rerouted in Pass 3 (\%) & 1.595 & 0.000 & 4.075 & 0.000 & 36.441 \\
+\bottomrule
+\end{tabular}
+\end{table}

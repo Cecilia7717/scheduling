@@ -1,0 +1,105 @@
+Experiment 2: Why MaxFlow-Passes Is Faster
+==========================================
+
+Configuration
+-------------
+Seed: 42
+Instances: 30
+Timing repeats per solver per instance: 20
+Jobs: 35-50
+Horizon rule: horizon = 6 * number_of_jobs
+Green share range: 0.6000-0.6500
+Brown share range: uncontrolled/random split of non-green time
+Target utilization range:
+    0.5500-0.6000
+
+Algorithms
+----------
+1. MaxFlow-Passes-Reuse
+   Same residual graph is retained across green -> brown -> red.
+
+2. MaxFlow-Restart
+   Same pass logic, but the flow network is rebuilt and solved from zero
+   at every carbon level.
+
+3. Pure-MinCostFlow
+   Direct min-cost flow baseline.
+
+Average Runtime
+---------------
+MaxFlow-Passes-Reuse: 5.032863 ms
+MaxFlow-Restart:      9.553061 ms
+Pure-MinCostFlow:     27.606694 ms
+
+Restart / Reuse ratio:
+    1.916279x
+
+MinCost / Reuse ratio:
+    5.398324x
+
+Where the Final Flow Is Added
+-----------------------------
+Pass 1 (green) fraction:
+    0.964488
+
+Pass 2 (brown) additional fraction:
+    0.032379
+
+Pass 3 (red) additional fraction:
+    0.003133
+
+Instances that required Pass 3:
+    4/30
+
+Residual Rerouting
+------------------
+Fraction of Pass-1 green allocation rerouted during Pass 2:
+    0.000000
+
+Fraction of existing green+brown allocation rerouted during Pass 3:
+    0.000000
+
+Incremental Max-Flow Work
+-------------------------
+Pass 1 mean BFS calls:
+    3.667
+Pass 2 mean BFS calls:
+    0.867
+Pass 3 mean BFS calls:
+    0.133
+
+Pass 1 mean augmenting pushes:
+    70.200
+Pass 2 mean augmenting pushes:
+    2.733
+Pass 3 mean augmenting pushes:
+    0.200
+
+Min-Cost-Flow Work
+------------------
+Mean shortest-path searches:
+    72.967
+
+Mean augmentations:
+    72.967
+
+Mean edge scans:
+    236165.733
+
+Correctness
+-----------
+All three methods are required to be feasible on every generated instance.
+The script also checks that all three exact methods return identical
+normalized carbon cost for every instance. A mismatch aborts the run.
+
+Files
+-----
+results.csv
+    One row per instance with flow fractions, rerouting, graph size,
+    per-pass Dinic work, min-cost-flow work, and runtime ratios.
+
+instance_XXXX.json
+    Full generated instance plus diagnostics for all three algorithms.
+
+summary.txt
+    Aggregate statistics for this configuration.

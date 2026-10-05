@@ -18,7 +18,7 @@ from typing import Any, Dict, List, Optional, Tuple
 # ============================================================
 
 HERE = Path(__file__).resolve().parent
-ALGORITHM_FILE = HERE / "maxflow_gpu.py"
+ALGORITHM_FILE = HERE / "maxflow.py"
 
 
 def load_algorithms():

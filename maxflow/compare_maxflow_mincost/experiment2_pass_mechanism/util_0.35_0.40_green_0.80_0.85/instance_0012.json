@@ -1,0 +1,822 @@
+{
+  "instance_id": 12,
+  "horizon": 216,
+  "jobs": [
+    {
+      "name": "J24",
+      "release": 89.0,
+      "deadline": 181.0,
+      "processing": 2.0
+    },
+    {
+      "name": "J32",
+      "release": 68.0,
+      "deadline": 209.0,
+      "processing": 2.0
+    },
+    {
+      "name": "J23",
+      "release": 45.0,
+      "deadline": 192.0,
+      "processing": 1.0
+    },
+    {
+      "name": "J16",
+      "release": 47.0,
+      "deadline": 196.0,
+      "processing": 2.0
+    },
+    {
+      "name": "J6",
+      "release": 19.0,
+      "deadline": 216.0,
+      "processing": 3.0
+    },
+    {
+      "name": "J3",
+      "release": 8.0,
+      "deadline": 109.0,
+      "processing": 1.0
+    },
+    {
+      "name": "J21",
+      "release": 47.0,
+      "deadline": 185.0,
+      "processing": 2.0
+    },
+    {
+      "name": "J8",
+      "release": 8.0,
+      "deadline": 183.0,
+      "processing": 1.0
+    },
+    {
+      "name": "J2",
+      "release": 3.0,
+      "deadline": 202.0,
+      "processing": 3.0
+    },
+    {
+      "name": "J31",
+      "release": 57.0,
+      "deadline": 197.0,
+      "processing": 3.0
+    },
+    {
+      "name": "J5",
+      "release": 5.0,
+      "deadline": 41.0,
+      "processing": 3.0
+    },
+    {
+      "name": "J19",
+      "release": 15.0,
+      "deadline": 198.0,
+      "processing": 3.0
+    },
+    {
+      "name": "J22",
+      "release": 76.0,
+      "deadline": 186.0,
+      "processing": 4.0
+    },
+    {
+      "name": "J11",
+      "release": 56.0,
+      "deadline": 118.0,
+      "processing": 5.0
+    },
+    {
+      "name": "J25",
+      "release": 41.0,
+      "deadline": 177.0,
+      "processing": 2.0
+    },
+    {
+      "name": "J27",
+      "release": 7.0,
+      "deadline": 184.0,
+      "processing": 2.0
+    },
+    {
+      "name": "J36",
+      "release": 33.0,
+      "deadline": 211.0,
+      "processing": 4.0
+    },
+    {
+      "name": "J4",
+      "release": 1.0,
+      "deadline": 152.0,
+      "processing": 4.0
+    },
+    {
+      "name": "J30",
+      "release": 56.0,
+      "deadline": 216.0,
+      "processing": 1.0
+    },
+    {
+      "name": "J33",
+      "release": 104.0,
+      "deadline": 207.0,
+      "processing": 1.0
+    },
+    {
+      "name": "J34",
+      "release": 5.0,
+      "deadline": 196.0,
+      "processing": 1.0
+    },
+    {
+      "name": "J10",
+      "release": 11.0,
+      "deadline": 109.0,
+      "processing": 2.0
+    },
+    {
+      "name": "J26",
+      "release": 23.0,
+      "deadline": 188.0,
+      "processing": 2.0
+    },
+    {
+      "name": "J7",
+      "release": 32.0,
+      "deadline": 148.0,
+      "processing": 4.0
+    },
+    {
+      "name": "J9",
+      "release": 36.0,
+      "deadline": 59.0,
+      "processing": 1.0
+    },
+    {
+      "name": "J35",
+      "release": 121.0,
+      "deadline": 216.0,
+      "processing": 2.0
+    },
+    {
+      "name": "J12",
+      "release": 7.0,
+      "deadline": 135.0,
+      "processing": 1.0
+    },
+    {
+      "name": "J28",
+      "release": 12.0,
+      "deadline": 176.0,
+      "processing": 4.0
+    },
+    {
+      "name": "J13",
+      "release": 4.0,
+      "deadline": 194.0,
+      "processing": 2.0
+    },
+    {
+      "name": "J29",
+      "release": 146.0,
+      "deadline": 185.0,
+      "processing": 1.0
+    },
+    {
+      "name": "J14",
+      "release": 6.0,
+      "deadline": 175.0,
+      "processing": 2.0
+    },
+    {
+      "name": "J18",
+      "release": 50.0,
+      "deadline": 187.0,
+      "processing": 1.0
+    },
+    {
+      "name": "J20",
+      "release": 3.0,
+      "deadline": 148.0,
+      "processing": 2.0
+    },
+    {
+      "name": "J17",
+      "release": 59.0,
+      "deadline": 163.0,
+      "processing": 3.0
+    },
+    {
+      "name": "J15",
+      "release": 25.0,
+      "deadline": 157.0,
+      "processing": 1.0
+    },
+    {
+      "name": "J1",
+      "release": 1.0,
+      "deadline": 192.0,
+      "processing": 2.0
+    }
+  ],
+  "energy_intervals": [
+    {
+      "name": "E0",
+      "start": 0.0,
+      "end": 93.0,
+      "energy": "green",
+      "length": 93.0
+    },
+    {
+      "name": "E1",
+      "start": 93.0,
+      "end": 100.0,
+      "energy": "red",
+      "length": 7.0
+    },
+    {
+      "name": "E2",
+      "start": 100.0,
+      "end": 110.0,
+      "energy": "red",
+      "length": 10.0
+    },
+    {
+      "name": "E3",
+      "start": 110.0,
+      "end": 157.0,
+      "energy": "green",
+      "length": 47.0
+    },
+    {
+      "name": "E4",
+      "start": 157.0,
+      "end": 193.0,
+      "energy": "green",
+      "length": 36.0
+    },
+    {
+      "name": "E5",
+      "start": 193.0,
+      "end": 199.0,
+      "energy": "red",
+      "length": 6.0
+    },
+    {
+      "name": "E6",
+      "start": 199.0,
+      "end": 200.0,
+      "energy": "brown",
+      "length": 1.0
+    },
+    {
+      "name": "E7",
+      "start": 200.0,
+      "end": 207.0,
+      "energy": "red",
+      "length": 7.0
+    },
+    {
+      "name": "E8",
+      "start": 207.0,
+      "end": 216.0,
+      "energy": "brown",
+      "length": 9.0
+    }
+  ],
+  "construction_witness_schedule": [
+    {
+      "job": "J1",
+      "start": 1.0,
+      "end": 3.0,
+      "processing": 2.0
+    },
+    {
+      "job": "J2",
+      "start": 5.0,
+      "end": 8.0,
+      "processing": 3.0
+    },
+    {
+      "job": "J3",
+      "start": 13.0,
+      "end": 14.0,
+      "processing": 1.0
+    },
+    {
+      "job": "J4",
+      "start": 17.0,
+      "end": 21.0,
+      "processing": 4.0
+    },
+    {
+      "job": "J5",
+      "start": 22.0,
+      "end": 25.0,
+      "processing": 3.0
+    },
+    {
+      "job": "J6",
+      "start": 32.0,
+      "end": 35.0,
+      "processing": 3.0
+    },
+    {
+      "job": "J7",
+      "start": 41.0,
+      "end": 45.0,
+      "processing": 4.0
+    },
+    {
+      "job": "J8",
+      "start": 48.0,
+      "end": 49.0,
+      "processing": 1.0
+    },
+    {
+      "job": "J9",
+      "start": 51.0,
+      "end": 52.0,
+      "processing": 1.0
+    },
+    {
+      "job": "J10",
+      "start": 58.0,
+      "end": 60.0,
+      "processing": 2.0
+    },
+    {
+      "job": "J11",
+      "start": 62.0,
+      "end": 67.0,
+      "processing": 5.0
+    },
+    {
+      "job": "J12",
+      "start": 71.0,
+      "end": 72.0,
+      "processing": 1.0
+    },
+    {
+      "job": "J13",
+      "start": 76.0,
+      "end": 78.0,
+      "processing": 2.0
+    },
+    {
+      "job": "J14",
+      "start": 81.0,
+      "end": 83.0,
+      "processing": 2.0
+    },
+    {
+      "job": "J15",
+      "start": 86.0,
+      "end": 87.0,
+      "processing": 1.0
+    },
+    {
+      "job": "J16",
+      "start": 89.0,
+      "end": 91.0,
+      "processing": 2.0
+    },
+    {
+      "job": "J17",
+      "start": 96.0,
+      "end": 99.0,
+      "processing": 3.0
+    },
+    {
+      "job": "J18",
+      "start": 105.0,
+      "end": 106.0,
+      "processing": 1.0
+    },
+    {
+      "job": "J19",
+      "start": 108.0,
+      "end": 111.0,
+      "processing": 3.0
+    },
+    {
+      "job": "J20",
+      "start": 116.0,
+      "end": 118.0,
+      "processing": 2.0
+    },
+    {
+      "job": "J21",
+      "start": 121.0,
+      "end": 123.0,
+      "processing": 2.0
+    },
+    {
+      "job": "J22",
+      "start": 125.0,
+      "end": 129.0,
+      "processing": 4.0
+    },
+    {
+      "job": "J23",
+      "start": 131.0,
+      "end": 132.0,
+      "processing": 1.0
+    },
+    {
+      "job": "J24",
+      "start": 135.0,
+      "end": 137.0,
+      "processing": 2.0
+    },
+    {
+      "job": "J25",
+      "start": 142.0,
+      "end": 144.0,
+      "processing": 2.0
+    },
+    {
+      "job": "J26",
+      "start": 150.0,
+      "end": 152.0,
+      "processing": 2.0
+    },
+    {
+      "job": "J27",
+      "start": 158.0,
+      "end": 160.0,
+      "processing": 2.0
+    },
+    {
+      "job": "J28",
+      "start": 162.0,
+      "end": 166.0,
+      "processing": 4.0
+    },
+    {
+      "job": "J29",
+      "start": 171.0,
+      "end": 172.0,
+      "processing": 1.0
+    },
+    {
+      "job": "J30",
+      "start": 174.0,
+      "end": 175.0,
+      "processing": 1.0
+    },
+    {
+      "job": "J31",
+      "start": 181.0,
+      "end": 184.0,
+      "processing": 3.0
+    },
+    {
+      "job": "J32",
+      "start": 187.0,
+      "end": 189.0,
+      "processing": 2.0
+    },
+    {
+      "job": "J33",
+      "start": 190.0,
+      "end": 191.0,
+      "processing": 1.0
+    },
+    {
+      "job": "J34",
+      "start": 195.0,
+      "end": 196.0,
+      "processing": 1.0
+    },
+    {
+      "job": "J35",
+      "start": 200.0,
+      "end": 202.0,
+      "processing": 2.0
+    },
+    {
+      "job": "J36",
+      "start": 205.0,
+      "end": 209.0,
+      "processing": 4.0
+    }
+  ],
+  "actual_utilization": 0.37037037037037035,
+  "energy_shares": {
+    "green": 0.8148148148148148,
+    "brown": 0.046296296296296294,
+    "red": 0.1388888888888889
+  },
+  "maxflow_passes_reuse": {
+    "algorithm": "MaxFlow-Passes-Reuse",
+    "feasible": true,
+    "total_processing": 80.0,
+    "normalized_cost": 0.0,
+    "final_energy_usage": {
+      "green": 80.0,
+      "brown": 0.0,
+      "red": 0.0
+    },
+    "diagnostics": {
+      "network": {
+        "vertices": 100,
+        "jobs": 36,
+        "atomic_intervals": 62,
+        "job_interval_edges": 1126,
+        "forward_edges": 1224,
+        "residual_edge_entries": 2448
+      },
+      "flow": {
+        "pass1_added": 80.0,
+        "pass2_added": 0.0,
+        "pass3_added": 0.0,
+        "pass1_fraction": 1.0,
+        "pass2_fraction": 0.0,
+        "pass3_fraction": 0.0,
+        "pass1_cumulative": 80.0,
+        "pass2_cumulative": 80.0,
+        "final_flow": 80.0
+      },
+      "pass1": {
+        "added_flow": 80.0,
+        "bfs_calls": 2,
+        "successful_bfs": 1,
+        "bfs_edge_scans": 2483,
+        "dfs_calls": 323,
+        "dfs_edge_scans": 995,
+        "root_dfs_calls": 53,
+        "augmenting_pushes": 52
+      },
+      "pass2": {
+        "added_flow": 0.0,
+        "bfs_calls": 0,
+        "successful_bfs": 0,
+        "bfs_edge_scans": 0,
+        "dfs_calls": 0,
+        "dfs_edge_scans": 0,
+        "root_dfs_calls": 0,
+        "augmenting_pushes": 0
+      },
+      "pass3": {
+        "added_flow": 0.0,
+        "bfs_calls": 0,
+        "successful_bfs": 0,
+        "bfs_edge_scans": 0,
+        "dfs_calls": 0,
+        "dfs_edge_scans": 0,
+        "root_dfs_calls": 0,
+        "augmenting_pushes": 0
+      },
+      "rerouting": {
+        "pass2_green": {
+          "rerouted_amount": 0.0,
+          "previous_flow": 80.0,
+          "rerouted_fraction": 0.0
+        },
+        "pass3_green_brown": {
+          "rerouted_amount": 0.0,
+          "previous_flow": 80.0,
+          "rerouted_fraction": 0.0
+        }
+      },
+      "timing": {
+        "split_seconds": 0.00012839899864047766,
+        "initial_build_seconds": 0.0016315060202032328,
+        "pass1_transition_seconds": 0.0,
+        "pass1_maxflow_seconds": 0.0004282440058887005,
+        "pass1_recover_seconds": 0.00013785797636955976,
+        "pass2_transition_seconds": 2.3573986254632473e-05,
+        "pass2_maxflow_seconds": 1.8440186977386475e-06,
+        "pass2_recover_seconds": 0.00012760702520608902,
+        "pass3_transition_seconds": 0.0,
+        "pass3_maxflow_seconds": 0.0,
+        "pass3_recover_seconds": 0.0,
+        "timeline_seconds": 0.00016490602865815163,
+        "internal_total_seconds": 0.0026822249637916684
+      }
+    },
+    "benchmark_timing": {
+      "mean_seconds": 0.0029462164326105266,
+      "median_seconds": 0.002721432945691049,
+      "min_seconds": 0.0025482759810984135,
+      "max_seconds": 0.007046382059343159
+    },
+    "mean_internal_timing": {
+      "initial_build_seconds": 0.0017809177166782319,
+      "internal_total_seconds": 0.0028069466876331716,
+      "pass1_maxflow_seconds": 0.0004112773865927011,
+      "pass1_recover_seconds": 0.0001436095917597413,
+      "pass1_transition_seconds": 0.0,
+      "pass2_maxflow_seconds": 1.565896673128009e-06,
+      "pass2_recover_seconds": 0.00013701217831112443,
+      "pass2_transition_seconds": 2.504386939108372e-05,
+      "pass3_maxflow_seconds": 0.0,
+      "pass3_recover_seconds": 0.0,
+      "pass3_transition_seconds": 0.0,
+      "split_seconds": 0.00010679844999685883,
+      "timeline_seconds": 0.0001682583475485444
+    },
+    "pass1": {
+      "flow": 80.0,
+      "energy_usage": {
+        "green": 80.0,
+        "brown": 0.0,
+        "red": 0.0
+      }
+    },
+    "pass2": {
+      "flow": 80.0,
+      "energy_usage": {
+        "green": 80.0,
+        "brown": 0.0,
+        "red": 0.0
+      }
+    },
+    "pass3": null,
+    "final_pass": 2
+  },
+  "maxflow_restart": {
+    "algorithm": "MaxFlow-Restart",
+    "feasible": true,
+    "total_processing": 80.0,
+    "normalized_cost": 0.0,
+    "final_energy_usage": {
+      "green": 80.0,
+      "brown": 0.0,
+      "red": 0.0
+    },
+    "diagnostics": {
+      "network": {
+        "vertices": 100,
+        "jobs": 36,
+        "atomic_intervals": 62,
+        "job_interval_edges": 1126,
+        "forward_edges": 1224,
+        "residual_edge_entries": 2448
+      },
+      "flow": {
+        "pass1_added": 80.0,
+        "pass2_added": 0.0,
+        "pass3_added": 0.0,
+        "pass1_fraction": 1.0,
+        "pass2_fraction": 0.0,
+        "pass3_fraction": 0.0,
+        "pass1_cumulative": 80.0,
+        "pass2_cumulative": 80.0,
+        "final_flow": 80.0
+      },
+      "pass1": {
+        "added_flow": 80.0,
+        "bfs_calls": 2,
+        "successful_bfs": 1,
+        "bfs_edge_scans": 2483,
+        "dfs_calls": 323,
+        "dfs_edge_scans": 995,
+        "root_dfs_calls": 53,
+        "augmenting_pushes": 52
+      },
+      "pass2": {
+        "added_flow": 0.0,
+        "bfs_calls": 0,
+        "successful_bfs": 0,
+        "bfs_edge_scans": 0,
+        "dfs_calls": 0,
+        "dfs_edge_scans": 0,
+        "root_dfs_calls": 0,
+        "augmenting_pushes": 0
+      },
+      "pass3": {
+        "added_flow": 0.0,
+        "bfs_calls": 0,
+        "successful_bfs": 0,
+        "bfs_edge_scans": 0,
+        "dfs_calls": 0,
+        "dfs_edge_scans": 0,
+        "root_dfs_calls": 0,
+        "augmenting_pushes": 0
+      },
+      "rerouting": {
+        "pass2_green": {
+          "rerouted_amount": 0.0,
+          "previous_flow": 80.0,
+          "rerouted_fraction": 0.0
+        },
+        "pass3_green_brown": {
+          "rerouted_amount": 0.0,
+          "previous_flow": 80.0,
+          "rerouted_fraction": 0.0
+        }
+      },
+      "restart_replay": {
+        "phase1_prefix_levels": 1,
+        "phase2_prefix_levels": 2,
+        "phase3_prefix_levels": 0,
+        "total_network_builds": 2,
+        "total_maxflow_calls": 3
+      },
+      "timing": {
+        "split_seconds": 0.00011739798355847597,
+        "pass1_build_seconds": 0.0015668940031901002,
+        "pass1_maxflow_seconds": 0.00042756006587296724,
+        "pass1_recover_seconds": 0.00014322297647595406,
+        "pass2_build_seconds": 0.001553243026137352,
+        "pass2_maxflow_seconds": 0.00041749910451471806,
+        "pass2_recover_seconds": 0.0002546770265325904,
+        "pass3_build_seconds": 0.0,
+        "pass3_maxflow_seconds": 0.0,
+        "pass3_recover_seconds": 0.0,
+        "timeline_seconds": 0.00015438394621014595,
+        "internal_total_seconds": 0.00497395102865994
+      }
+    },
+    "benchmark_timing": {
+      "mean_seconds": 0.004938712297007442,
+      "median_seconds": 0.004818310495465994,
+      "min_seconds": 0.004638780956156552,
+      "max_seconds": 0.00741427403409034
+    },
+    "mean_internal_timing": {
+      "internal_total_seconds": 0.0049290367111098025,
+      "pass1_build_seconds": 0.0014880968257784844,
+      "pass1_maxflow_seconds": 0.00040164815727621316,
+      "pass1_recover_seconds": 0.00013637604424729944,
+      "pass2_build_seconds": 0.001639080501627177,
+      "pass2_maxflow_seconds": 0.0004059257276821882,
+      "pass2_recover_seconds": 0.00026871070731431245,
+      "pass3_build_seconds": 0.0,
+      "pass3_maxflow_seconds": 0.0,
+      "pass3_recover_seconds": 0.0,
+      "split_seconds": 0.0001060305570717901,
+      "timeline_seconds": 0.00015969411469995975
+    },
+    "pass1": {
+      "flow": 80.0,
+      "energy_usage": {
+        "green": 80.0,
+        "brown": 0.0,
+        "red": 0.0
+      }
+    },
+    "pass2": {
+      "flow": 80.0,
+      "energy_usage": {
+        "green": 80.0,
+        "brown": 0.0,
+        "red": 0.0
+      }
+    },
+    "pass3": null,
+    "final_pass": 2
+  },
+  "pure_min_cost": {
+    "algorithm": "Pure-MinCostFlow",
+    "feasible": true,
+    "total_processing": 80.0,
+    "normalized_cost": 0.0,
+    "final_energy_usage": {
+      "green": 80.0,
+      "brown": 0.0,
+      "red": 0.0
+    },
+    "diagnostics": {
+      "network": {
+        "vertices": 100,
+        "jobs": 36,
+        "atomic_intervals": 62,
+        "job_interval_edges": 1126,
+        "forward_edges": 1224,
+        "residual_edge_entries": 2448
+      },
+      "solve": {
+        "flow": 80.0,
+        "cost": 0.0,
+        "shortest_path_calls": 52,
+        "edge_scans": 127244,
+        "augmentations": 52
+      },
+      "timing": {
+        "split_seconds": 0.0001091549638658762,
+        "build_seconds": 0.001592789078131318,
+        "solve_seconds": 0.01329776004422456,
+        "recover_seconds": 0.0001486119581386447,
+        "timeline_seconds": 0.00016651605255901814,
+        "internal_total_seconds": 0.015319837024435401
+      }
+    },
+    "benchmark_timing": {
+      "mean_seconds": 0.015338539698859677,
+      "median_seconds": 0.015279737010132521,
+      "min_seconds": 0.014889062033034861,
+      "max_seconds": 0.016220296965911984
+    },
+    "mean_internal_timing": {
+      "build_seconds": 0.0016732664022129028,
+      "internal_total_seconds": 0.015177639061585068,
+      "recover_seconds": 0.00014025894924998283,
+      "solve_seconds": 0.013086939352797344,
+      "split_seconds": 0.00010964201064780354,
+      "timeline_seconds": 0.0001630208978895098
+    }
+  }
+}
