@@ -109,7 +109,7 @@ def draw_heatmap(df, xcol, ycol, metric, title, colorbar, outfile, log=False,
                 label = 'TO' if timeouts[i, j] else '—'
             if timeouts[i, j]:
                 label += f'\n({timeouts[i,j]} TO)'
-            text_color = 'white' if np.isfinite(val) and norm(val) > .55 else 'black'
+            text_color = 'white' #if np.isfinite(val) and norm(val) > .55 else 'black'
             ax.text(j, i, label, ha='center', va='center', fontsize=8,
                     color=text_color)
     cb = fig.colorbar(image, ax=ax, fraction=.045, pad=.025)
@@ -132,15 +132,15 @@ def main():
     out = Path(args.output)
     out.mkdir(parents=True, exist_ok=True)
     df = load_data(args.input)
-    draw_heatmap(df, 'num_original_jobs', 'kappa_max', 'lawler_runtime_seconds',
-                 'Lawler runtime by jobs and outsourcing penalty',
-                 'Median runtime (seconds, log scale)',
-                 out / 'lawler_runtime_heatmap_jobs_kappa', log=True)
-    if df['_density'].notna().any():
-        draw_heatmap(df, 'num_original_jobs', '_density', 'lawler_runtime_seconds',
-                     'Lawler runtime by jobs and interval density',
-                     'Median runtime (seconds, log scale)',
-                     out / 'lawler_runtime_heatmap_jobs_density', log=True)
+    # draw_heatmap(df, 'num_original_jobs', 'kappa_max', 'lawler_runtime_seconds',
+    #              'Lawler runtime by jobs and outsourcing penalty',
+    #              'Median runtime (seconds, log scale)',
+    #              out / 'lawler_runtime_heatmap_jobs_kappa', log=True)
+    # if df['_density'].notna().any():
+    #     draw_heatmap(df, 'num_original_jobs', '_density', 'lawler_runtime_seconds',
+    #                  'Lawler runtime by jobs and interval density',
+    #                  'Median runtime (seconds, log scale)',
+    #                  out / 'lawler_runtime_heatmap_jobs_density', log=True)
     if df['_cloud_pct'].notna().any():
         draw_heatmap(df, 'num_original_jobs', 'kappa_max', '_cloud_pct',
                      'Cloud outsourcing by jobs and penalty',
